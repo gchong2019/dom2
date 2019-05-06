@@ -245,4 +245,379 @@ a:hover {
   color: #e62318 !important;
 }
 
+/* 第一步头部 */
+.mll-header .nav-bar {
+  background-color: #f8f8f8;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  position: relative;
+  z-index: 290;
+  color: #717171;
+}
+.mll-header .nav-bar a {
+  color: #717171;
+}
+.mll-header .nav-bar .fouce {
+  position: relative;
+  height: 30px;
+  float: left;
+}
+.mll-header .nav-bar .fouce .login-tip .log {
+  padding: 0 8px;
+}
+.mll-header .nav-bar .fouce .login-tip .reg {
+  padding: 0 8px;
+}
+.mll-header .nav-bar .fouce .region span {
+  display: inline-block;
+  vertical-align: top;
+}
+.mll-header .nav-bar .fouce .region i {
+  display: inline-block;
+  vertical-align: top;
+  width: 11px;
+  height: 14px;
+  background: url(../img/nav.png) 0 -38px no-repeat;
+  overflow: hidden;
+  margin: 7px 5px 0 0;
+}
+.mll-header .nav-bar .fouce li {
+  height: 30px;
+  line-height: 28px;
+  float: left;
+  margin-right: 5px;
+}
+.mll-header .nav-bar .fouce .city {
+  position: relative;
+}
+.mll-header .nav-bar .fouce .city .trigger {
+  display: inline-block;
+  padding: 0 5px;
+}
+.mll-header .nav-bar .customer {
+  height: 30px;
+  float: right;
+}
+.mll-header .nav-bar .customer .drop-down.help .drop-down-content {
+  padding: 3px 10px 6px;
+}
+.mll-header .nav-bar .customer .drop-down.help .drop-down-content a {
+  display: block;
+  line-height: 22px;
+}
+.mll-header .nav-bar .customer .drop-down.toggle a.drop-down-trigger .icon {
+  background: url(../img/nav.png) no-repeat;
+  overflow: hidden;
+  margin-right: 2px;
+}
+.mll-header .nav-bar .customer .drop-down.attention .drop-down-content {
+  padding: 14px 22px;
+  text-align: center;
+}
+.mll-header .nav-bar .customer .drop-down.attention a.drop-down-trigger .icon {
+  width: 12px;
+  height: 13px;
+  background-position: 0 -10px;
+  margin-top: 8px;
+}
+.mll-header .nav-bar .customer .drop-down.cart .drop-down-content {
+  width: 245px;
+}
+.mll-header .nav-bar .customer .drop-down.cart .drop-down-content .empty {
+  padding: 30px 15px;
+  line-height: 48px;
+}
+.mll-header .nav-bar .customer .drop-down.mll .drop-down-content {
+  width: 67px;
+  padding: 3px 10px 6px;
+}
+.mll-header .nav-bar .customer .drop-down.mll .drop-down-content a {
+  display: block;
+  line-height: 22px;
+}
+.mll-header .nav-bar .customer li {
+  height: 28px;
+  border: solid 1px #f8f8f8;
+  float: left;
+  position: relative;
+  padding: 0 5px;
+}
+.mll-header .nav-bar .customer li.hover {
+  background: #fff;
+  border-color: #eaeaea;
+  border-bottom-color: #fff;
+}
+.mll-header .nav-bar .customer .drop-down .drop-down-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-top: none;
+  left: -1px;
+  top: 29px;
+}
+.mll-header .nav-bar .customer .drop-down a.drop-down-trigger {
+  display: block;
+}
+.mll-header .nav-bar .customer .drop-down a.drop-down-trigger .text {
+  padding: 0 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+.mll-header .nav-bar .customer .drop-down a.drop-down-trigger .arrow {
+  width: 7px;
+  height: 4px;
+  background: url(../img/nav.png) 0 0 no-repeat;
+  transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  overflow: hidden;
+  margin-top: 13px;
+  display: inline-block;
+  vertical-align: top;
+}
+.mll-header .nav-bar .customer .drop-down a.drop-down-trigger .icon {
+  display: inline-block;
+  vertical-align: top;
+}
+.mll-header .nav-bar .customer .collect {
+  margin-right: 10px;
+}
+.mll-header .nav-bar .customer .hot-line {
+  padding: 0;
+}
+.mll-header .nav-bar .customer .hot-line .mask {
+  background: #fff;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+  top: 27px;
+  position: absolute;
+  display: none;
+}
+.mll-header .nav-bar .customer .hot-line .marquee {
+  height: 28px;
+  overflow: hidden;
+}
+.mll-header .nav-bar .customer .hot-line .item {
+  height: 28px;
+  line-height: 30px;
+  width: 190px;
+  padding: 0 5px;
+  overflow: hidden;
+}
+.mll-header .nav-bar .customer .hot-line .drop-down-content {
+  cursor: pointer;
+  width: 400px;
+  left: auto;
+  right: -1px;
+  border-top: solid 1px #eaeaea;
+}
+.mll-header .nav-bar .customer .hot-line .drop-down-content .item {
+  float: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.red,
+a.red {
+  color: #e62318 !important;
+}
+
+/* 头部第3块二级导航 */
+.mll-header .menu-bar {
+  height: 36px;
+  border-bottom: none;
+}
+.mll-header .menu-bar .category {
+  width: 200px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  z-index: 100;
+}
+.mll-header .menu-bar .category h2 {
+  font-weight: 400;
+  font-family: '微软雅黑';
+  background: #e62318;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+}
+
+.category-option {
+  width: 200px;
+  padding: 9px 0 9px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  _filter: alpha(opacity=80);
+  position: absolute;
+  z-index: 101;
+  display: none;
+}
+.category-option .cat-item {
+  height: 34px;
+  line-height: 34px;
+  vertical-align: top;
+  transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+}
+.category-option .cat-item .sub-cat {
+  overflow: hidden;
+  display: none;
+  width: 616px;
+  height: 427px;
+  padding: 9px 30px 25px 0;
+  left: 200px;
+  top: 0;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 10000;
+  position: absolute;
+  line-height: 20px;
+  opacity: 0;
+}
+.category-option .cat-item .icon.i6 {
+  background-position: -21px -264px;
+}
+.category-option .cat-item .icon {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 8px 10px 0 15px;
+  background: url(../img/menu.png) no-repeat;
+  opacity: .65;
+}
+.category-option .cat-item .txt {
+  color: #c8c8c8;
+  margin-right: 10px;
+  float: left;
+  font-size: 13px;
+}
+
+.category-option .sub-cat .sub-cat-links {
+  width: 410px;
+}
+.category-option .sub-cat .sub-cat-links .sub-group {
+  padding-top: 16px;
+}
+.category-option .sub-cat .sub-cat-links .sub-title {
+  width: 93px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.category-option .sub-cat .sub-cat-links .sub-title .i-t {
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  float: left;
+  background: url(../img/menu.png) -285px 0 no-repeat;
+  margin: 8px 4px 0 10px;
+}
+.category-option .sub-cat .sub-cat-links .sub-content {
+  font-size: 12px;
+  width: 299px;
+  padding-bottom: 16px;
+  border-bottom: 1px dotted #afacb1;
+}
+.category-option .sub-cat .sub-cat-links .sub-content a {
+  margin-right: 16px;
+  display: inline-block;
+  color: #666 !important;
+}
+.category-option .sub-cat .sub-cat-links .sub-title {
+  width: 93px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.category-option .sub-cat .sub-cat-links .sub-title .i-t {
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  float: left;
+  background: url(../img/menu.png) -285px 0 no-repeat;
+  margin: 8px 4px 0 10px;
+}
+.category-option .sub-cat .sub-cat-brand {
+  width: 190px;
+  padding-left: 16px;
+}
+.category-option .sub-cat .sub-cat-brand h6 {
+  font-size: 14px;
+  padding: 16px 0 12px;
+  color: #333;
+}
+.category-option .sub-cat .sub-cat-brand .tag {
+  margin-bottom: 25px;
+  font-size: 12px;
+  height: 88px;
+  overflow: hidden;
+}
+.category-option .sub-cat .sub-cat-brand .tag a {
+  margin-right: 16px;
+  display: inline-block;
+  color: #666 !important;
+  line-height: 22px;
+}
+
+/* 对二级导航加的li标签叫一个hover属性 */
+.category-option .cat-item.hover .sub-cat {
+  display: block;
+}
+
+/* 测试阶段对二级导航进行手标悬停显示 */
+.category-option .cat-item:hover .sub-cat {
+  display: block;
+  opacity: 1;
+}
+
+.category-option .cat-item:hover .icon.i6 {
+  background-position: 0 -264px;
+  opacity: 1;
+}
+
+/* 手标悬停时的左侧图标的效果 */
+.category-option .cat-item:hover {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  padding-left: 5px;
+}
+
+/*二级导航手标经过字体变红 */
+.category-option .sub-cat .sub-cat-links .sub-group a:hover {
+  color: #e62318 !important;
+}
+
+.Left {
+  float: left;
+}
+
+/* 横向导航 */
+.mll-header .menu-bar .navigator {
+  margin-left: 200px;
+  height: 36px;
+}
+.mll-header .menu-bar .navigator li.current a {
+  color: #e62318 !important;
+}
+.mll-header .menu-bar .navigator li {
+  padding: 0 15px;
+  font-family: '微软雅黑';
+  height: 36px;
+  line-height: 36px;
+  float: left;
+  position: relative;
+}
+.mll-header .menu-bar .navigator li a {
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=nain_head.css.map */

@@ -5,642 +5,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=SSS, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/login.css">
     <title>Document</title>
-    <style>
-        /* 1.样式和清除 */
-        
-        blockquote,
-        body,
-        button,
-        code,
-        dd,
-        div,
-        dl,
-        dt,
-        fieldset,
-        form,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        input,
-        legend,
-        li,
-        ol,
-        p,
-        pre,
-        td,
-        textarea,
-        th,
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .clear:after {
-            content: '';
-            display: block;
-            height: 0;
-            clear: both;
-        }
-        
-        body {
-            font: 12px/1.5 "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
-        }
-        /* 2.设置字体 */
-        
-        @font-face {
-            font-family: iconfont;
-            src: url(fonts/font_1451959379_8626566.woff) format("woff")
-        }
-        
-        .logo h1 .tb-logo-cn {
-            position: relative;
-            font-size: 36px;
-            top: -9px;
-        }
-        
-        .logo h1 .tb-logo-url {
-            font-size: 50px;
-            position: relative;
-            top: -52px;
-        }
-        
-        .logo h1 .iconfont {
-            display: block;
-            color: #f40;
-            font-weight: 400;
-        }
-        
-        .iconfont {
-            font-family: iconfont!important;
-            font-size: 16px;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: .2px;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* 3.头部 */
-        
-        .logo h1 a {
-            text-decoration: none;
-            display: block;
-        }
-        
-        #header {
-            padding: 22px 0;
-            height: 44px;
-        }
-        
-        .logo {
-            width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        .logo h1 {
-            display: block;
-            float: left;
-            zoom: 1;
-            width: 110px;
-            height: 44px;
-            vertical-align: middle;
-        }
-        
-        h1 {
-            font-size: 18px;
-        }
-        
-        .logo h1 a {
-            text-decoration: none;
-            display: block;
-        }
-        
-        .login-msg.error {
-            border-color: #ffb4a8;
-            background-color: #fef2f2;
-            color: #6C6C6C;
-        }
-        
-        .login-msg {
-            line-height: 16px;
-            padding: 6px 10px;
-            overflow: hidden;
-            width: 278px;
-            background: #fef2f2;
-            border: 1px solid;
-        }
-        
-        .login-msg p {
-            float: left;
-            white-space: normal;
-            word-wrap: break-word;
-            width: 240px;
-        }
-        
-        .logo .link {
-            float: right;
-            line-height: 44px;
-            color: #666;
-            font-size: 12px;
-            text-decoration: none;
-        }
-        
-        a {
-            color: #f40;
-            text-decoration: none;
-        }
-        
-        .logo .link .iconfont {
-            font-size: 16px;
-            color: #f40;
-        }
-        
-        .logo .link:hover {
-            color: #f40;
-        }
-        
-        a:hover {
-            color: #f40;
-            text-decoration: underline;
-        }
-        /* 4.内容content */
-        
-        #content {
-            width: 100%;
-            position: relative;
-        }
-        /* 尾部footer */
-        
-        .footer {
-            position: relative;
-            margin: 60px auto 0;
-            padding: 7px 0 9px;
-            border-top: 1px solid #ddd;
-            width: 1200px;
-        }
-        
-        .footer .footer-hd p {
-            margin-bottom: 8px;
-            line-height: 27px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .footer .footer-bd p,
-        .footer .footer-hd p {
-            padding-bottom: 8px;
-            overflow: hidden;
-            *zoom: 1;
-        }
-        
-        .footer .footer-bd a,
-        .footer .footer-hd a {
-            display: inline;
-            float: left;
-            margin: 0 4px;
-            white-space: nowrap;
-            color: #6c6c6c;
-        }
-        
-        .footer .footer-bd b,
-        .footer .footer-hd b {
-            display: inline;
-            float: left;
-            margin: 0 3px;
-            font-weight: 400;
-            color: #ddd;
-        }
-        
-        .footer .footer-bd span,
-        .footer .footer-hd span {
-            margin: 0 4px;
-        }
-        
-        .footer .footer-bd em,
-        .footer .footer-bd span,
-        .footer .footer-hd em,
-        .footer .footer-hd span {
-            display: inline;
-            float: left;
-            white-space: nowrap;
-            color: #9c9c9c;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="page" class="">
-        <div id="header" class="clear" data-spm="1000340">
-            <div class="logo" data-spm-anchor-id="a2107.1.1000340.i0.13c811d9a0ztbm">
-                <h1><a href="//www.taobao.com" title="淘宝网"><i class="iconfont tb-logo-cn"></i><i class="iconfont tb-logo-url"></i></a></h1>
-                <div class="login-msg error" style="text-align: center;width: 880px; margin: 0 auto;">
-                    <p class="error" style="float: none;width: auto;">
-                        为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！
-                    </p>
-                </div>
-                <a href="https://survey.taobao.com/survey/Q095thIx2" class="link">
-                    <i class="iconfont"></i> "登录页面"改进建议
+    <!-- 头部第一块 -->
+    <div class="header"></div>
+    <!-- logo第二块 -->
+    <header class="login-header">
+        <div id="" class="user_header clearfix" style="padding:11px 0 3px 0;">
+            <div class="logo Left" style="background: url(img/logo2.png) 0 0 no-repeat;width:176px;height:72px;margin-top:-4px;">
+                <a href="/" title="返回美乐乐首页">
+                    <img style="background:none" src="img/blank.gif" width="127" height="52" border="0" alt="美乐乐">
                 </a>
             </div>
+            <div id="" class="nav Right">
+                <a href="/">返回首页</a> |
+                <a href="/article_cat-4/article-656.html" target="_blank">帮助中心</a>
+            </div>
         </div>
-        <!--         <div id="content">
-            <div class="login-newbg" style="background-image: url(https://gtms01.alicdn.com/tps/i1/TB1GTCYLXXXXXcHXpXXcoeQ2VXX-2500-600.jpg);">
-                <input type="hidden" id="J_adUrl" name="adUrl" value="">
-                <input type="hidden" id="J_adImage" name="adImage" value="">
-                <input type="hidden" id="J_adText" name="adText" value="">
-                <input type="hidden" id="J_viewFd4PC" name="viewFd4PC" value="https://ifs.tanx.com/ifs_brand?i=%BB%99%02%3B%BF%ED%FD%98T%E2ZV44%A6q%24%90%C4F%1A%988%E0%A8%A6%26Uuy%22%FCp%94A%C9%AA%8A%B0%B4%17Vks%00c%B8L%E9%A6%C3U%22%24%DA%C1w%26%16_WBQ%E5%D8%E9%E4.%BA%80%C2%BEO%B2%E9%A6%F9%FE%FE%D0%EB%DC%CC%FE%84%E4%8A%94%E7%F1D%B6%28%A9%FE%18%A8%2C%F8%FF%08%F8O%2FL%D4%3E%3A%C7h%C6%3B%C8%C5%9E%22%F1%3A%B7%F2%10%B8%EFN%E3%A1Ly%ADXj%CFHHP%7E_%E7N%CE%23%87C%5E%C3W%89%0Cvz%F4%FC%9C%F1%5E%5D%C3%B2%0B%D6%7F%93%B1J%BDZ%21%10%9C%7C%9E%E9%F9%DA%91%10%EBY%13%BF%84A.%89%E8%9F%E1%93%A2%90q7S%E5%CA%B5%FDX%15%09%DC%BE%F1%F21lqX%E65%1D%1B%12W5%19Vg%85F%60%AF%DFf%7B%BD%06%A2%B2%CB&amp;p=AT06hAscdIcAXMHMnL%2FUjwwN9LfYmR9lGg%3D%3D">                <input type="hidden" id="J_viewFd4Mobile" name="viewFd4Mobile" value="">
-            </div>
-            <div class="login-adlink">
-                <a href="https://www.taobao.com/m" target="_blank" onclick="javascript:goldlog.record('/member.11.1','','','H46777383')"></a>
-            </div>
-
-
-            <div class="content-layout">
-                <div class="login-box-warp">
-
-                    <div class="login-box no-longlogin module-static" id="J_LoginBox">
-
-                       //login box begin
-                        <div class="hd">
-
-                            <div class="login-switch" onselectstart="return false;">
-                                <i class="iconfont quick" id="J_Static2Quick" onclick="javascript:goldlog.record('/member.13.1','','','H46777383')" data-spm-anchor-id="a2107.1.0.i0.13c811d9a0ztbm"></i>
-                                <i class="iconfont static" id="J_Quick2Static" data-spm-anchor-id="a2107.1.0.i1.13c811d9a0ztbm"></i>
-                            </div>
-                            <div class="login-tip">
-                                <div class="poptip">
-                                    <div class="poptip-arrow">
-                                        <em></em>
-                                        <span></span>
-                                    </div>
-                                    <div class="poptip-content">
-                                        <i class="iconfont"></i>扫码登录更安全
-                                    </div>
+    </header>
+    <!-- 登录页面第三块 -->
+    <div class="main bg-red">
+        <div class="content clearfix">
+            <article class="Left">
+                <a href="#" title="51优惠再续" target="_blank">
+                    <img alt="51优惠再续" src="img/1556585281664886179.png" style="background-color:transparent;" width="620" height="454" class="ad-img">
+                </a>
+            </article>
+            <aside class="Right" id="JS_loginForm">
+                <div style="
+                    position: absolute;
+                    bottom: 68px;
+                    border-top: solid 1px #f4f4f4;
+                    width: 360px;
+                    left: 0;
+                    z-index: 124;
+                ">
+                </div>
+                <div class="yahei">
+                    <div class="switch-type">
+                        <ul class="login-switch clearfix" style="border-bottom: 1px solid rgb(244, 244, 244); left: 0px;">
+                            <li class="switch-account JS_switch-key on" data-switch-index="1">账号登录
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-form">
+                        <div class="login-type clearfix" style="left: 0px; top: -5px;">
+                            <div id="JS_login_pwd" class="login-pwd Left">
+                                <div class="error-date">
+                                    <i style="display: none;"></i>
+                                    <span></span>
                                 </div>
+                                <div class="input-group select-username" style="overflow:inherit">
+                                    <label class="i-user" for="username"></label>
+                                    <input class="yahei gray" name="username" type="text">
+                                </div>
+                                <div class="input-group">
+                                    <label class="i-pwd" for="password"></label>
+                                    <input class="yahei black" name="password" type="password" autocomplete="off" style="display: none;">
+                                    <input class="yahei gray">
+                                </div>
+                                <div class="input-group none">
+                                    <label class="i-captcha" for="captcha"></label>
+                                    <input maxlength="4" class="Left yahei gray" name="captcha" type="text" style="width:138px" autocomplete="off">
+                                    <i class="right-icon"></i>
+                                    <a class="Left" href="javascript:void(0);">
+                                        <img class="captcha-img JS_validCode" width="60" height="28" src="img/" data-switch-index="1" title="看不清换一张" alt="验证码">
+                                    </a>
+                                    <a class="Left refresh-btn JS_refreshBtn" href="javascript:void(0);"></a>
+                                </div>
+                                <div class="regist-group clearfix" style="margin-top:-12px;">
+                                    <a class="Right" href="javascript:_gaq.push(['_trackEvent','主站-注册登录页面','click','忘记密码']);_ana.push(['trackEvent','主站-注册登录页面','click','忘记密码']);window.location.href='/user/?act=get_password';">忘记密码?</a>
+                                </div>
+                                <a class="submit-btn" href="javascript:;" style="margin:24px 0 17px 0;">登录</a>
                             </div>
-
                         </div>
-                        <div class="bd">
-                            //登录的错误信息结束
-
-                            <div id="J_QuickLogin" class="ww-login hidden" style="display: none;">
-                                <form action="" class="ww-form">
-                                    <div class="login-title">
-                                        选择其中一个已登录的账户
-                                    </div>
-
-                                    <div class="ww-userlist">
-
-                                    </div>
-                                    <div class="trigger">
-
-                                    </div>
-                                    <div class="submit">
-                                        <button type="submit" class="J_Submit" id="J_SubmitQuick">登 录</button>
-                                    </div>
-                                    <div class="other-login">
-                                        <a href="" class="light-link" id="J_Sso2Static">使用其他账户登录</a>
-                                    </div>
-                                </form>
-                            </div>
-                            <div id="J_MiserLogin" class="ww-login hidden">
-                                <form action="" class="ww-form">
-                                    <input type="hidden" id="x_token" value="">
-                                    <div class="login-title">
-                                        选择其中一个已登录的账户
-                                    </div>
-
-                                    <div class="ww-userlist">
-
-                                    </div>
-                                    <div class="trigger">
-
-                                    </div>
-                                    <div class="submit">
-                                        <p><input type="checkbox" id="J_Mdelete"> 不再记住密码</p>
-                                        <button type="submit" tabindex="5" id="J_SubmitMiser">登 录</button>
-                                    </div>
-                                    <div class="other-login">
-                                        <a href="" title="使用其他账户登录" class="light-link" id="J_Miser2Static">使用其他账户登录</a>
-                                    </div>
-                                </form>
-                            </div>
-
-                            //标准登录框
-                            <div class="static-form " id="J_StaticForm">
-                                <div class="login-title">
-
-
-                                    密码登录
-
-                                </div>
-
-                                <form action="/member/login.jhtml?redirectURL=http%3A%2F%2Fwww.taobao.com%2F" method="post" id="J_Form">
-                                    <div id="J_Message" style="display:none;" class="login-msg error">
-                                        <i class="iconfont"></i>
-
-                                        <p class="error"></p>
-
-                                    </div>
-                                  //手机号登录
-                                    <div class="field username-field">
-                                        <label for="TPL_username_1"> <i class="iconfont" title="会员名"></i></label>
-                                        <span class="ph-label">会员名/邮箱/手机号</span> <input type="text" name="TPL_username" id="TPL_username_1" class="login-text J_UserName" value="" maxlength="32" tabindex="1" aria-label="会员名/邮箱/手机号">
-                                    </div>
-
-                                    <div class="field pwd-field">
-                                        <label id="password-label" for="TPL_password_1"><i class="icon iconfont" title="登录密码"></i></label>
-                                        <span id="J_StandardPwd">
-                                   <input type="password" name="TPL_password" id="TPL_password_1" class="login-text" maxlength="40" tabindex="2" autocomplete="off" aria-label="登录密码">
-                                </span>
-                                    </div>
-                                    // use new slide checkcode
-                                    <div id="nocaptcha" class="nc-container tb-login" data-nc-idx="1">
-                                        <div id="nc_1_wrapper" class="nc_wrapper">
-                                            <div id="nc_1_n1t" class="nc_scale">
-                                                <div id="nc_1__bg" class="nc_bg"></div>
-                                                <span id="nc_1_n1z" class="nc_iconfont btn_slide"></span>
-                                                <div id="nc_1__scale_text" class="scale_text slidetounlock"><span class="nc-lang-cnt" data-nc-lang="_startTEXT">请按住滑块，拖动到最右边</span></div>
-                                                <div id="nc_1_clickCaptcha" class="clickCaptcha">
-                                                    <div class="clickCaptcha_text">
-                                                        <b id="nc_1__captcha_text" class="nc_captch_text"></b>
-                                                        <i id="nc_1__btn_2" class="nc_iconfont nc_btn_2 btn_refresh"></i>
-                                                    </div>
-                                                    <div class="clickCaptcha_img"></div>
-                                                    <div class="clickCaptcha_btn"></div>
-                                                </div>
-                                                <div id="nc_1_imgCaptcha" class="imgCaptcha">
-                                                    <div class="imgCaptcha_text"><input id="nc_1_captcha_input" maxlength="6" type="text" style="ime-mode:disabled"></div>
-                                                    <div class="imgCaptcha_img" id="nc_1__imgCaptcha_img"></div>
-                                                    <i id="nc_1__btn_1" class="nc_iconfont nc_btn_1 btn_refresh" onclick="document.getElementById('nc_1__imgCaptcha_img').children[0].click()"></i>
-                                                    <div class="imgCaptcha_btn">
-                                                        <div id="nc_1__captcha_img_text" class="nc_captcha_img_text"></div>
-                                                        <div id="nc_1_scale_submit" class="nc_scale_submit"></div>
-                                                    </div>
-                                                </div>
-                                                <div id="nc_1_cc" class="nc-cc"></div>
-                                                <i id="nc_1__voicebtn" tabindex="0" role="button" class="nc_voicebtn nc_iconfont" style="display:none"></i>
-                                                <b id="nc_1__helpbtn" class="nc_helpbtn"><span class="nc-lang-cnt" data-nc-lang="_learning">了解新功能</span></b>
-                                            </div>
-                                            <div id="nc_1__voice" class="nc_voice"></div>
-                                        </div>
-                                    </div>
-                                    <div class="submit">
-
-                                        <input id="J_NcoSig" name="ncoSig" type="hidden">
-                                        <input id="J_NcoSessionid" name="ncoSessionid" type="hidden">
-                                        <input id="J_NcoToken" type="hidden" name="ncoToken" value="f87d69da26b3bfc8519c38430bba138e42dd9387">
-                                        <input id="J_NcoShow" type="hidden" name="slideCodeShow" value="false">
-
-
-                                        <input type="hidden" name="useMobile" value="false">
-                                        <input type="hidden" id="J_lang" name="lang" value="zh_CN">
-                                        <input type="hidden" name="loginsite" value="0" id="J_loginsite"> <input type="hidden" name="newlogin" value="">
-
-                                        <input type="hidden" id="J_TPL_redirect_url" name="TPL_redirect_url" value="http://www.taobao.com/">
-                                        <input type="hidden" id="J_From" name="from" value="tbTop">
-                                        <input type="hidden" name="fc" value="default">
-                                        <input type="hidden" id="J_CssStyle" name="style" value="default">
-                                        <input type="hidden" id="J_CssStyle2" name="css_style" value="">
-                                        <input type="hidden" name="keyLogin" value="false">
-                                        <input type="hidden" name="qrLogin" value="true">
-                                        <input type="hidden" name="newMini" value="false">
-                                        <input type="hidden" name="newMini2" value="false">
-
-                                        <input type="hidden" name="tid">
-                                        <input type="hidden" name="loginType" value="3">
-                                        <input type="hidden" name="minititle" value="">
-                                        <input type="hidden" name="minipara" value="">
-                                        <input type="hidden" name="pstrong" value="">
-
-                                        <input type="hidden" id="J_sign" name="sign" value="">
-                                        <input type="hidden" id="J_need_sign" name="need_sign" value="">
-
-                                        <input type="hidden" id="J_isIgnore" name="isIgnore" value="">
-                                        <input type="hidden" id="J_full_redirect" name="full_redirect" value="">
-                                        // 子账号跳转方式 
-                                        <input type="hidden" name="sub_jump" value="">
-
-                                        <input type="hidden" name="popid" value="">
-                                        <input type="hidden" name="callback" value="">
-
-                                        <input type="hidden" id="J_guf" name="guf" value="">
-                                        <input type="hidden" id="J_not_duplite_str" name="not_duplite_str" value="">
-                                        <input type="hidden" name="need_user_id" value="">
-
-                                        <input type="hidden" name="poy">
-
-                                        <input type="hidden" id="gvfdc" name="gvfdcname" value="10">
-                                        <input type="hidden" name="gvfdcre" value="68747470733A2F2F7777772E74616F62616F2E636F6D2F3F73706D3D61323134352E373236383339332E302E302E66396161356437636F394A727A50">
-
-                                        <input type="hidden" id="J_from_encoding" name="from_encoding" value="">
-
-                                        <input type="hidden" id="J_sub" name="sub" value="">
-
-                                        <input type="hidden" name="TPL_password_2" id="TPL_password_2">
-                                        <input type="hidden" id="J_PBK" value="9a39c3fefeadf3d194850ef3a1d707dfa7bec0609a60bfcc7fe4ce2c615908b9599c8911e800aff684f804413324dc6d9f982f437e95ad60327d221a00a2575324263477e4f6a15e3b56a315e0434266e092b2dd5a496d109cb15875256c73a2f0237c5332de28388693c643c8764f137e28e8220437f05b7659f58c4df94685">
-                                        <input type="hidden" name="loginASR" value="1">
-                                        <input type="hidden" name="loginASRSuc" value="0">
-
-                                        <input type="hidden" id="J_allp" name="allp" value="">
-                                        <input type="hidden" name="oslanguage" value="zh-CN">
-                                        <input type="hidden" name="sr" value="1536*864">
-                                        <input type="hidden" name="osVer">
-                                        <input type="hidden" name="naviVer" value="chrome|72.03626119">
-                                        <input type="hidden" name="osACN" value="Mozilla">
-                                        <input type="hidden" name="osAV" value="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36">
-                                        <input type="hidden" name="osPF" value="Win32">
-                                        <input type="hidden" name="miserHardInfo" id="M_hard_info">
-                                        <input type="hidden" id="J_Appkey" name="appkey" value="00000000">
-                                        <input type="hidden" name="nickLoginLink" value="">
-                                        <input type="hidden" name="mobileLoginLink" value="https://login.taobao.com/member/login.jhtml?spm=a21bo.2017.201864-2.d1.6ac311d9OB4gVh&amp;f=top&amp;redirectURL=http://www.taobao.com/&amp;useMobile=true">
-                                        <input type="hidden" name="showAssistantLink" value="">
-
-
-                                        <input id="J_UnitClose " value="true" type="hidden">
-                                        <button type="submit" class="J_Submit" tabindex="3" id="J_SubmitStatic" data-ing="正在登录...">登 录</button>
-                                    </div>
-
-                                    <ul class="entries">
-                                        <li id="J_OtherLogin" class="other-login">
-
-
-                                            <a href="http://weibo.com/login.php?entry=taobao&amp;goto=https%3A%2F%2Flogin.taobao.com%2Faso%2Ftvs%3Fdomain%3Dweibo%26sid%3Dc21b00afaf17e4696fc172288e565569%26target%3D687474703A2F2F7777772E74616F62616F2E636F6D2F&amp;goto2=http%3A%2F%2Fwww.taobao.com%2F"
-                                                tabindex="4" class="weibo-login"><i class="iconfont"></i>微博登录</a>
-
-                                            <a href="https://auth.alipay.com/login/index.htm?loginScene=7&amp;goto=https%3A%2F%2Fauth.alipay.com%2Flogin%2Ftaobao_trust_login.htm%3Ftarget%3Dhttps%253A%252F%252Flogin.taobao.com%252Fmember%252Falipay_sign_dispatcher.jhtml%253Ftg%253Dhttp%25253A%25252F%25252Fwww.taobao.com%25252F&amp;params=VFBMX3JlZGlyZWN0X3VybD1odHRwJTNBJTJGJTJGd3d3LnRhb2Jhby5jb20lMkY%3D"
-                                                tabindex="5" class="alipay-login"><i class="iconfont"></i>支付宝登录</a>
-
-
-                                        </li>
-                                    </ul>
-
-
-                                    <div class="login-links">
-
-
-
-                                        <a href="https://passport.taobao.com/ac/password_find.htm?from_site=0&amp;login_id=&amp;lang=zh_CN&amp;app_name=&amp;tracelog=signin_main_pass" tabindex="6" class="forget-pwd" target="_blank">
-                                    忘记密码</a>
-
-                                        <a href="https://passport.taobao.com/ac/nick_find.htm?from_site=0&amp;lang=zh_CN&amp;app_name=tbTop" target="_blank">忘记会员名</a>
-
-                                        <a href="http://reg.taobao.com/member/newbie.htm?spm=a2107.1.0.0.13c811d9a0ztbm&amp;from=login" class="register" target="_blank" tabindex="7" data-spm-anchor-id="a2107.1.0.0">免费注册</a>
-
-                                    </div>
-                                    <input type="hidden" name="um_token" value="TA863DB33A28F222163EC6B5EEBD893AA6555E06641FE6A6FE563ACF649"></form>
-                            </div>
-                            //快速登录开始
-                            <div class="quick-form">
-                                //扫码登录开始
-                                <div class="qrcode-login" id="J_QRCodeLogin" style="">
-                                    <div class="login-tip" style="display: none;">
-                                        <div class="poptip">
-                                            <div class="poptip-arrow">
-                                                <em></em>
-                                                <span></span>
-                                            </div>
-                                            <div class="poptip-content">
-                                                <i class="iconfont"></i>密码登录在这里</div>
-                                        </div>
-                                    </div>
-                                    <div class="login-title">手机扫码，安全登录</div>
-
-                                    <div class="qrcode-mod">
-                                        <div class="qrcode-main">
-                                            <div class="qrcode-img" id="J_QRCodeImg" style="opacity: 1; left: 80px;"><img src="//img.alicdn.com/tfscom/TB1cpD3TAvoK1RjSZFDwu0Y3pXa.png"></div>
-                                            <div class="qrcode-help"></div>
-                                            <div class="msg-err">
-                                                <h6>二维码已失效</h6>
-                                                <a href="javascript:;" class="refresh J_QRCodeRefresh">请点击刷新</a>
-                                            </div>
-                                        </div>
-                                        <div class="qrcode-desc" data-spm="25847036">
-                                            <i class="iconfont"></i>
-
-                                            <p>
-                                                <font class="ft-gray">打开 </font><a href="https://www.taobao.com/m" target="_blank" class="light-link">手机淘宝</a> | <a href="https://www.tmall.com/wow/portal/act/app-download?mmstat=pc_login" target="_blank" class="light-link">手机天猫</a>
-                                                <span class="ft-gray">扫一扫登录</span></p>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="qrcode-msg">
-                                        <div class="msg-ok">
-                                            <div class="msg-icon">
-                                                <i class="iconfont icon-ok"></i>
-                                                <i class="iconfont icon-phone"></i>
-                                            </div>
-                                            <h6>扫描成功！</h6>
-                                            <p>请在手机上确认登录</p>
-                                            <div class="link"><a href="#" class="light-link J_QRCodeRefresh">返回二维码登录</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="login-links">
-                                        <a href="" class="forget-pwd J_Quick2Static" target="_blank" data-spm-anchor-id="a2107.1.0.0">密码登录</a>
-                                        <a href="http://reg.taobao.com/member/newbie.htm?from=login" class="register" target="_blank">免费注册</a>
-                                    </div>
-                                </div>
-                               // 扫码登录结束
-                               //一键登录开始
-
-                                //一键登录结束
-                            </div>
-                            //快速登录结束
+                        <div class="other-login clearfix">
+                            <a href="javascript:;" class="i-weixin Left J-weixin-request JS_switch-key" data-switch-index="2">
+                                <i></i>
+                                <span>微信登录</span>
+                            </a>
+                            <a href="javascript:;" class="i-app Left JS_switch-key JS-app-request" data-switch-index="3">
+                                <i></i>
+                                <span>APP扫码</span>
+                            </a>
+                            <a href="javascript:;" class="i-qq Left">
+                                <i></i>
+                                <span>QQ登录</span>
+                            </a>
                         </div>
                     </div>
-                    //标准登录框结束
                 </div>
-            </div>
+            </aside>
         </div>
-
-    </div> -->
-
-
-        <div class="footer" data-spm="1997523009">
+    </div>
 
 
+    <!-- footer1第四块 -->
+    <div class="footer1"></div>
 
-
-
-
-
-
-
-            <div class="footer-hd">
-                <p>
-                    <a href="http://page.1688.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>
-                    <b>|</b>
-                    <a href="http://www.alibaba.com">阿里巴巴国际站</a>
-                    <b>|</b>
-                    <a href="http://www.1688.com">阿里巴巴中国站</a>
-                    <b>|</b>
-                    <a href="http://www.aliexpress.com">全球速卖通</a>
-                    <b>|</b>
-                    <a href="http://www.taobao.com">淘宝网</a>
-                    <b>|</b>
-                    <a href="http://www.tmall.com">天猫</a>
-                    <b>|</b>
-                    <a href="http://ju.taobao.com">聚划算</a>
-                    <b>|</b>
-                    <a href="http://www.etao.com">一淘</a>
-                    <b>|</b>
-                    <a href="http://www.alimama.com">阿里妈妈</a>
-                    <b>|</b>
-                    <a href="https://www.fliggy.com">飞猪</a>
-                    <b>|</b>
-                    <a href="http://www.xiami.com">虾米</a>
-                    <b>|</b>
-                    <a href="http://www.aliyun.com">阿里云计算</a>
-                    <b>|</b>
-                    <a href="http://www.yunos.com">云OS</a>
-                    <b>|</b>
-                    <a href="http://www.net.cn">万网</a>
-                    <b>|</b>
-                    <a href="http://www.alipay.com">支付宝</a>
-                    <b>|</b>
-                    <a href="http://www.laiwang.com/">来往</a>
-                </p>
-            </div>
-            <div class="footer-bd">
-                <p>
-                    <a href="http://www.taobao.com/about">关于淘宝</a>
-                    <a href="http://www.taobao.com/about/partners.php">合作伙伴</a>
-                    <a href="http://pro.taobao.com">营销中心</a>
-                    <a href="mailto:lianzheng@taobao.com" title="lianzheng@taobao.com" target="_self">廉正举报</a>
-                    <a href="http://service.taobao.com/support/main/service_route.htm">联系客服</a>
-                    <a href="http://open.taobao.com">开放平台</a>
-                    <a href="http://www.taobao.com/about/join.php">诚征英才</a>
-                    <a href="https://consumerservice.taobao.com/contact-us?spm=a21bo.50862.1997523009.35.5dcec6f7zikHQ3">联系我们</a>
-                    <a href="http://www.taobao.com/sitemap.php">网站地图</a>
-                    <a href="http://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201811121436_80276.html">法律声明</a>
-                    <a href="http://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html">隐私权政策</a>
-                    <em>© 2019 Taobao.com 版权所有</em>
-                </p>
-                <p>
-                    <span>网络文化经营许可证：浙网文[2016]0132-032号</span>
-                    <b>|</b>
-                    <span>增值电信业务经营许可证：浙B2-20080224-1</span>
-                    <b>|</b>
-                    <span>信息网络传播视听节目许可证：1109364号</span>
-                </p>
-            </div>
-            <div class="footer-ft">
-                <a href="http://www.pingpinganan.gov.cn/web/index.aspx?file=index.aspx">
-                    <img width="36" height="36" src="https://assets.alicdn.com/apps/login/static/css/images/wj.gif">
-                </a>
-                <a href="http://idinfo.zjaic.gov.cn/bscx.do?method=hddoc&amp;id=33018400000067" class="mod mod-a"></a>
-                <a href="http://idinfo.zjaic.gov.cn/bscx.do?&amp;method=hddoc&amp;id=33018400000067" class="mod mod-b"></a>
-                <a href="http://www.theclimategroup.org.cn/about/friend" class="mod mod-c"></a>
-                <a href="https://ss.cnnic.cn/verifyseal.dll?&amp;sn=2010062300100001357&amp;pa=20100701" class="mod mod-d"></a>
-                <a href="http://www.ppaaol.com/verifySite.do?id=1051" class="mod mod-e"></a>
-            </div>
-            <!-- #footer END -->
-            <div id="server-num">login011176156198.na62</div>
-
-        </div>
+    <!-- footer4第五块 -->
+    <div class="footer4"></div>
+    <script src="script/js/jquery.js"></script>
+    <script>
+        $('.header').load('head.html');
+        $('.footer1').load('footer1.html');
+        $('.footer4').load('footer3.html');
+    </script>
 
 </body>
 

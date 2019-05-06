@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* 多行注释：压缩后不显示 */
+/*！ 强制注释：一直显示 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Microsoft YaHei, Arial;
+  _font-family: 宋体, Arial;
+  font-size: 12px;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+header {
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.Left {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  overflow: hidden;
+  vertical-align: top;
+  background: #eee;
+}
+
+.Right {
+  float: right;
+}
+
+.user_header .nav {
+  width: 180px;
+  padding-top: 40px;
+  text-align: right;
+}
+
+/* 登录主界面 部分*/
+.bg-red {
+  background: #e62318;
+}
+
+.main {
+  padding: 72px 0;
+  min-width: 1190px;
+}
+.main .content {
+  margin: 0 auto;
+  width: 1070px;
+  position: relative;
+}
+.main .content aside .login-form {
+  width: 306px;
+  overflow: hidden;
+  position: relative;
+}
+.main .content aside .login-form .login-type {
+  position: relative;
+  width: 306px;
+  left: 0;
+}
+.main .content aside .login-switch {
+  position: relative;
+  font-size: 16px;
+  color: #888;
+  border-bottom: 1px solid #f4f4f4;
+  width: 925px;
+}
+.main .content aside .login-switch li {
+  position: relative;
+  float: left;
+  width: 154px;
+  text-align: center;
+  margin: 0 0 23px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.main .content aside .login-switch li.on {
+  color: #e62318;
+  font-weight: 700;
+}
+
+aside {
+  position: relative;
+  width: 306px;
+  min-height: 371px;
+  background: #fff;
+  padding: 22px 27px 20px 27px;
+}
+
+.yahei {
+  font-family: "Microsoft YaHei", SimHei;
+}
+
+.switch-type {
+  position: relative;
+  width: 306px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=login.css.map */

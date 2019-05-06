@@ -51,7 +51,7 @@ body {
 }
 
 ._view_ {
-    // width: $footer_W+1100;
+    width: $footer_W+1100;
     margin-left: auto;
     margin-right: auto;
 }
@@ -83,7 +83,7 @@ body {
             background-position: -150px -50px;
         }
         a {
-            width: $footer_W+50!important;
+            width: 146px!important;
             display: inline-block;
             height: ($footer_H)-20;
         }
