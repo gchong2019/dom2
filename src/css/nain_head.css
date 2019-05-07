@@ -569,10 +569,6 @@ a.red {
 }
 
 /* 对二级导航加的li标签叫一个hover属性 */
-.category-option .cat-item.hover .sub-cat {
-  display: block;
-}
-
 /* 测试阶段对二级导航进行手标悬停显示 */
 .category-option .cat-item:hover .sub-cat {
   display: block;
