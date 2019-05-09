@@ -274,7 +274,7 @@ textarea {
 //     width: 60px;
 //     height: 28px;
 // }
-.submit-btn {
+#JS_login_pwd .submit-btn {
     display: block;
     height: 42px;
     line-height: 42px;
@@ -282,7 +282,7 @@ textarea {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color: #fff !important;
     border-radius: 3px;
     margin: 12px 0 0 0;
 }

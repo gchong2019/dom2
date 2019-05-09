@@ -114,6 +114,7 @@ ul {
 }
 
 .goods-panel {
+  margin-left: 140px;
   width: 510px;
   float: left;
 }
@@ -145,7 +146,6 @@ ul {
 }
 .goods-panel .table .btns {
   padding-bottom: 9px;
-  position: relative;
 }
 .goods-panel .table .btns .add {
   float: left;
@@ -378,6 +378,75 @@ th {
 
 .Left {
   float: left;
+}
+
+/* 添加购物车上面的数量按钮样式 */
+.goods-panel .table dl {
+  margin-bottom: 30px;
+}
+.goods-panel .table dl dd {
+  width: 399px;
+  float: right;
+}
+.goods-panel .table dl dt {
+  width: 62px;
+  color: #999;
+  float: left;
+}
+.goods-panel .table .number {
+  color: #999;
+}
+.goods-panel .table .number .row .input {
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 111px;
+  height: 32px;
+}
+.goods-panel .table .number .row .input input {
+  float: left;
+  padding: 0;
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  border: solid 1px #ddd;
+  outline: 0;
+  background: 0 0;
+  font-size: 12px;
+  line-height: 30px;
+  -webkit-appearance: none;
+}
+.goods-panel .table .number .row .input .click .add-num {
+  background-position: -171px -968px;
+}
+.goods-panel .table .number .row .input .click .add-num.default {
+  background-position: -185px -936px;
+}
+.goods-panel .table .number .row .input .click a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../img/goods.png) -92px -968px no-repeat;
+}
+.goods-panel .table .number .row .input .click .minus-num {
+  background-position: -92px -968px;
+}
+.goods-panel .table .number dt {
+  line-height: 28px;
+}
+
+._s1190_ .goods-panel .table dl dd {
+  width: 423px;
+}
+
+.Left {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 /*# sourceMappingURL=details.css.map */

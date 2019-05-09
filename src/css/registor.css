@@ -30,8 +30,7 @@ body {
   padding: 40px;
   padding-right: 0;
 }
-.user_content .error {
-  visibility: hidden;
+.user_content .error3 {
   height: 22px;
   line-height: 22px;
   margin-left: 412px;
@@ -45,7 +44,7 @@ body {
   border: solid 1px #d5d5d5;
   background: #fff;
 }
-.user_content .error.error2 {
+.user_content .error3.error2 {
   background: url(img/login_icon2.png) scroll no-repeat 100px -224px;
   color: #d10000;
   background: #fff3f3;
@@ -316,6 +315,11 @@ a.white {
 }
 .login_api .api_from a.qq {
   background-position: 0 0;
+}
+
+/* 给注册框添加一个输入框之间的距离 */
+.p {
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=registor.css.map */

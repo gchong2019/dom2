@@ -218,7 +218,7 @@ img {
 
 .scroll-btn {
     span {
-        current {
+        .current {
             background: #333;
         }
         display: inline-block;
@@ -242,4 +242,13 @@ a:hover {
 
 .scroll-banner .pr .expr-link .img-list .expr-btn:hover {
     background-position: 0 -763px;
+}
+
+
+/* 在写样式的时候加的 */
+
+.scroll-btn {
+    span.current {
+        background: #333;
+    }
 }

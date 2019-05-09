@@ -206,7 +206,7 @@ img {
   cursor: pointer;
   background: #fff;
 }
-.scroll-btn span current {
+.scroll-btn span .current {
   background: #333;
 }
 
@@ -216,6 +216,11 @@ a:hover {
 
 .scroll-banner .pr .expr-link .img-list .expr-btn:hover {
   background-position: 0 -763px;
+}
+
+/* 在写样式的时候加的 */
+.scroll-btn span.current {
+  background: #333;
 }
 
 /*# sourceMappingURL=banner.css.map */
